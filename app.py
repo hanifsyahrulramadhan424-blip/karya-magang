@@ -188,3 +188,21 @@ with tab4:
 # -----------------------------------------------------------------------------
 render_data_explorer(data=data)
 render_footer()
+
+st.markdown(
+    """
+    <style>
+    /* Menyembunyikan toolbar bawaan Streamlit di pojok kanan atas */
+    [data-testid="stToolbar"] {
+        visibility: hidden;
+        height: 0%;
+        position: fixed;
+    }
+    /* Menyembunyikan footer bawaan jika ada */
+    footer {
+        visibility: hidden;
+    }
+    </style>
+    """,
+    unsafe_allow_html=True
+)
